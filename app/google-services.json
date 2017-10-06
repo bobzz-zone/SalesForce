@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1006453031014",
+    "firebase_url": "https://sales-force-application-91a63.firebaseio.com",
+    "project_id": "sales-force-application-91a63",
+    "storage_bucket": "sales-force-application-91a63.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1006453031014:android:360c516f0579a2ab",
+        "android_client_info": {
+          "package_name": "mtisfa.com.sfa"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1006453031014-jk3vmknvgae3klcrvae3gh682kgvllcn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbiP-tRQeFH5VD7fcUGruA1z4dgjlZlPY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
