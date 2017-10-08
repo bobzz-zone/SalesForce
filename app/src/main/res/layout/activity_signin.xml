@@ -29,7 +29,8 @@
             android:inputType="textPersonName"
             android:fontFamily=""
             tools:ignore="LabelFor"
-            android:background="null"/>
+            android:textColor="@color/Black"
+            android:background="@drawable/transparent"/>
         <View
             android:layout_marginTop="12dp"
             android:layout_marginLeft="50dp"
@@ -38,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="1dp"></View>
         <EditText
-            android:background="null"
+            android:background="@drawable/transparent"
             android:layout_margin="8dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
@@ -46,7 +47,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAlignment="center"
-            android:layout_centerHorizontal="true"
             android:hint="@string/password"
             android:inputType="textPassword"
             tools:ignore="LabelFor" />
