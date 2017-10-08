@@ -5,6 +5,9 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.drawable.Drawable;
+import android.os.Build;
+import android.support.v4.content.ContextCompat;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
@@ -185,6 +188,10 @@ public class Utility {
         String myFormat = "yyyy-MM-dd HH:mm:ss.SSS";
         SimpleDateFormat sdf = new SimpleDateFormat(myFormat, Locale.US);
         return sdf.format(date);
+    }
+
+    public static final Drawable getDrawable(Context context, int id) {
+        return ContextCompat.getDrawable(context, id);
     }
 
 }

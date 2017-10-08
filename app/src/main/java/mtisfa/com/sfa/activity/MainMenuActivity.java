@@ -8,13 +8,17 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TabHost;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import mtisfa.com.sfa.R;
+import mtisfa.com.sfa.Utility.Utility;
 import mtisfa.com.sfa.activity.tabs.news.News;
 import mtisfa.com.sfa.activity.tabs.orders.Orders;
 import mtisfa.com.sfa.activity.tabs.outlets.Outlets;
@@ -71,21 +75,52 @@ public class MainMenuActivity extends AppCompatActivity implements ViewPager.OnP
         tabHost.setup();
 
         for(int i=0;i<tabs.length;i++){
-            TabHost.TabSpec tabSpec;
-            tabSpec = tabHost.newTabSpec(tabs[i]);
-            tabSpec.setIndicator(tabs[i]);
-            tabSpec.setContent(new FakeContent(getApplicationContext()));
-            tabHost.addTab(tabSpec);
+            setupTab(new TextView(this), tabs[i]);
         }
 
         tabHost.setOnTabChangedListener(this);
     }
+    private void setupTab(final View view, final String tag) {
+        View tabview = createTabView(tabHost.getContext(), tag);
+        TabHost.TabSpec setContent = tabHost.newTabSpec(tag).setIndicator(tabview).setContent(new TabHost.TabContentFactory() {
+            public View createTabContent(String tag) {
+                return view;
+            }
+        });
+        tabHost.addTab(setContent);
+    }
 
+    private static View createTabView(final Context context, final String text) {
+        View view = LayoutInflater.from(context).inflate(R.layout.tab, null);
+        TextView tabName = (TextView)view.findViewById(R.id.tab_name);
+        tabName.setText(text);
+        ImageView tabIcon = (ImageView)view.findViewById(R.id.tab_icon);
+        switch (text) {
+            case "Schedule":
+                tabIcon.setBackground(Utility.getDrawable(context, R.drawable.tab_schedule_icon_selector));
+                break;
+            case "Outlets":
+                tabIcon.setBackground(Utility.getDrawable(context, R.drawable.outlets_icon));
+                break;
+            case "News":
+                tabIcon.setBackground(Utility.getDrawable(context, R.drawable.news_icon));
+                break;
+            case "Orders":
+                tabIcon.setBackground(Utility.getDrawable(context, R.drawable.orders_icon));
+                break;
+            case "Profile":
+                tabIcon.setBackground(Utility.getDrawable(context, R.drawable.profile__icon));
+                break;
+        }
+        return view;
+    }
     //TAB HOST DELEGATE
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
     }
+
+
 
     @Override
     public void onPageSelected(int position) {

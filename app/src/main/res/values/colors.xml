@@ -8,4 +8,6 @@
     <color name="White">#ffffff</color>
     <color name="Done">#70D03F</color>
     <color name="Pending">#F9A11F</color>
+    <color name="TabUnSelect">#000000</color>
+    <color name="TabSelect">#0066B0</color>
 </resources>
