@@ -38,9 +38,6 @@ public class MainMenuActivity extends AppCompatActivity implements ViewPager.OnP
         initViewPager();
         initTabHost();
     }
-    public void goToAssignment(View v) {
-        startActivity(new Intent(getApplicationContext(),AssignmentActivity.class));
-    }
 
     private void initViewPager() {
         viewPager = (ViewPager)findViewById(R.id.view_pager);
@@ -56,19 +53,19 @@ public class MainMenuActivity extends AppCompatActivity implements ViewPager.OnP
         viewPager.setOnPageChangeListener(this);
     }
 
-    public class FakeContent implements TabHost.TabContentFactory{
-        Context context;
-        public FakeContent(Context mcontext){
-            context=mcontext;
-        }
-        @Override
-        public View createTabContent(String s) {
-            View fakeView = new View(context);
-            fakeView.setMinimumHeight(0);
-            fakeView.setMinimumHeight(0);
-            return fakeView;
-        }
-    }
+//    public class FakeContent implements TabHost.TabContentFactory{
+//        Context context;
+//        public FakeContent(Context mcontext){
+//            context=mcontext;
+//        }
+//        @Override
+//        public View createTabContent(String s) {
+//            View fakeView = new View(context);
+//            fakeView.setMinimumHeight(0);
+//            fakeView.setMinimumHeight(0);
+//            return fakeView;
+//        }
+//    }
 
     private void initTabHost() {
         tabHost=(TabHost)findViewById(R.id.tabhost);

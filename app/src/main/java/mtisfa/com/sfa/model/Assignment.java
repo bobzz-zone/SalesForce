@@ -21,4 +21,10 @@ public class Assignment extends RealmObject {
     public String note;
     @SerializedName("customer")
     public String customer;
+    @SerializedName("contact_person")
+    public String contact_person;
+    @SerializedName("contact_display")
+    public String contact_display;
+    @SerializedName("phone")
+    public String phone;
 }

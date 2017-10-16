@@ -35,14 +35,14 @@
             android:layout_height="match_parent"
             android:layout_weight=".5"
             android:background="@drawable/schedule_left_button"
-            android:text="prev day"
+            android:text="Today"
             />
         <Button
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
             android:background="@drawable/schedule_right_button"
-            android:text="next day"
+            android:text="Tommorow"
             />
     </LinearLayout>
     <android.support.v4.widget.SwipeRefreshLayout

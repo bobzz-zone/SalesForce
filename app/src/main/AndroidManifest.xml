@@ -33,13 +33,6 @@
         <activity
             android:name=".activity.MainMenuActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activity.AssignmentActivity"
-            android:label="@string/assignment" />
-        <activity
-            android:name=".activity.AssignmentWorkLogActivity"
-            android:parentActivityName=".activity.AssignmentActivity"
-            ></activity>
     </application>
 
 </manifest>

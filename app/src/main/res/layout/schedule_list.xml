@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="90dp"
-    android:background="@color/Black">
+    android:layout_height="90dp">
     <ImageView
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
@@ -21,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Outlet name"
+            android:id="@+id/customer"
             android:textColor="@color/White"
             android:textStyle="bold"
             android:textSize="17dp"/>
@@ -28,7 +28,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Contact Person"
+            android:text=""
+            android:id="@+id/cp"
             android:textColor="@color/White"
             android:textSize="16dp"/>
 
@@ -36,6 +37,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Status"
+            android:id="@+id/status"
             android:textColor="@color/White"
             android:textSize="16dp"/>
     </LinearLayout>
@@ -44,6 +46,7 @@
         android:layout_marginRight="20dp"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:id="@+id/call"
         android:background="@drawable/call_button"/>
 
 </LinearLayout>
