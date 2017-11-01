@@ -36,6 +36,7 @@
             android:layout_weight=".5"
             android:background="@drawable/schedule_left_button"
             android:text="Today"
+            android:id="@+id/today"
             />
         <Button
             android:layout_width="0dp"
@@ -43,6 +44,7 @@
             android:layout_weight=".5"
             android:background="@drawable/schedule_right_button"
             android:text="Tommorow"
+            android:id="@+id/tommorow"
             />
     </LinearLayout>
     <android.support.v4.widget.SwipeRefreshLayout

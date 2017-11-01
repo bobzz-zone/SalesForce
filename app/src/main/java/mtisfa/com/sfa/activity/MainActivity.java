@@ -3,6 +3,7 @@ package mtisfa.com.sfa.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.location.Location;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,8 +11,9 @@ import android.view.Window;
 
 import io.realm.Realm;
 import mtisfa.com.sfa.R;
+import mtisfa.com.sfa.Utility.GPSActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends GPSActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,5 +38,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }, 1000);
+    }
+
+    @Override
+    public void onLocationChanged(Location location) {
+        super.onLocationChanged(location);
+
     }
 }

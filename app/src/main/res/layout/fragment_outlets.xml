@@ -26,6 +26,8 @@
     </RelativeLayout>
     <EditText
         android:background="@drawable/search_button"
+        android:id="@+id/seachBox"
+        android:imeOptions="actionSearch"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
         android:layout_width="match_parent"
